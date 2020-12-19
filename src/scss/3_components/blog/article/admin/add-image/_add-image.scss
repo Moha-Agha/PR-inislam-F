@@ -1,0 +1,105 @@
+.add-image {
+    width: 100%;
+    position: relative;
+    margin: 0px auto 10px auto;
+    
+    input[type=file] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    .add-image_file-dummy {
+      width: 100%;
+      min-height:195px;
+      background: $brand-black;
+      border: 2px dashed $darker-grey;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s ease-in-out;
+      
+      .add-image_success {
+            margin: 0;
+            padding: 0;
+            widows: 314px;
+             height:195px;
+      }
+      .add-image_default {
+        p{
+            font-size: map-get($font-sizes , "l" );
+            margin: 0;
+        }
+        .add-image_default_note{
+            color: $darker-grey;
+            font-size: map-get($font-sizes , "s" );
+        }
+       
+      }
+    }
+    
+    &:hover .add-image_file-dummy {
+      background: rgba(255,255,255,0.1);
+    }
+    
+    input[type=file]:focus + .add-image_file-dummy {
+      outline: 2px solid rgba(255,255,255,0.5);
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+    
+    input[type=file]:valid + .add-image_file-dummy {
+      
+      .add-image_success {
+        background:none;
+          img{
+              width: 100%;
+              height: 100%;
+          }
+      }
+      .add-image_default  {
+        display: none;
+      }
+    }
+  }
+
+  .add-image-user{
+    margin-bottom: 20px;
+    .add-image_file-dummy {
+     min-height: 140px;
+     .add-image_success {  
+            height: 140px;
+    }
+    }
+  }
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .sharing{display: none;}
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}
+
+
+
+
+

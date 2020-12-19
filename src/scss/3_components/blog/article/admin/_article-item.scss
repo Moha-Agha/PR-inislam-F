@@ -1,0 +1,90 @@
+.article-card{
+    background: #212020;
+    padding: 20px;
+    // margin: 15px 0 ;
+    border-radius: $border-radius-lg;
+    position: relative;
+    overflow: hidden;
+   
+  .article-image{
+        img{
+            border-radius: $border-radius-lg;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+  }
+  
+.article-title{
+        color: $grey;
+        font-size: map-get($font-sizes , 'm' );
+        max-width: 320px;
+        margin: 5px 0 5px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+.article-subtitle{
+        color: $darker-grey;
+        font-size: map-get($font-sizes , 's' );
+        max-width: 320px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+.article-section{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        font-size: map-get( $font-sizes, 's' );
+        opacity: 0.4;
+        
+        &:first-child{
+        width: 180px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+    }
+}
+
+.article-footer{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    .edit-button , .delete-button{ 
+       border-radius: $border-radius-lg;
+       background-color: $brand-grey;   
+       text-align: center;
+       padding: 7px;
+       width: 48%;
+       font-size: map-get($font-sizes , 'l' );
+       color: $white;
+       cursor: pointer;
+       @include add-shadow-xl();
+       transition: all ease-in-out 0.3s;
+      }
+    
+      .delete-button{
+        padding: 9px;
+        background-color: $brand-red ;  
+      }
+      .delete-button:hover{
+        background-color: #ff002e ; 
+        @include add-shadow-service();
+       }
+      .edit-button:hover{
+        background-color:#a7a5a5; 
+        @include add-shadow-service();
+       }
+
+       .article-footer_sure-delete{
+         width: 100%;
+       }
+}
+
+}

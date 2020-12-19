@@ -1,0 +1,40 @@
+.message-card{
+    background: #212020;
+    padding: 20px;
+    // margin: 15px 0 ;
+    border-radius: $border-radius-lg;
+.message-title{}
+.message-subtitle{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        font-size: map-get( $font-sizes, 'xs' );
+        opacity: 0.4;
+        
+        &:first-child{
+        width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+    }
+}
+.message-body{
+    font-size: map-get( $font-sizes, 's' );
+}
+.message-footer{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    div{    
+        div{
+            margin-right: 10px;  
+          }
+      }
+}
+
+}

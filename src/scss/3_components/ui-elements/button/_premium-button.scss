@@ -1,0 +1,36 @@
+.premium-button{
+  position: relative;
+  display: inline-block;
+    width: auto;
+    background-color:$brand-red; 
+    color: $white;
+    font-size: map-get( $font-sizes, 's' );
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    margin: auto 10px auto 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: $border-radius-lg;
+    cursor: pointer;
+    @include add-shadow-xl();
+    transition: ease-in-out 0.2s all;
+
+    &:hover{
+      color: $brand-red ;
+      background-color:$grey; 
+    }
+
+}
+
+.circle-premium-button{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: $brand-red;
+    color: $white;
+    text-align: center;
+    font-size: map-get( $font-sizes, 's' );
+    }

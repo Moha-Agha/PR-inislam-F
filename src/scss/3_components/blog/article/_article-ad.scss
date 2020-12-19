@@ -1,0 +1,91 @@
+
+    .article_body_ad-desktop{
+        width: 300px;
+        height: 630px;
+       
+        .article_body_ad_info{
+            display: inline-flex;
+            flex-flow: nowrap nowrap;
+            align-items: center;
+            color: $darker-grey;
+            font-size: map-get($font-sizes, 'xxs' );
+            margin: auto auto 10px auto;
+        .aicon-info{
+            margin-right: 5px;
+            font-size: map-get($font-sizes, 's' ); 
+                }
+        }
+        .article_body_ad_ad{
+            // background: $grey;
+            //  border-radius: $border-radius-lg;
+            width: 300px;
+            height: 600px;
+            position: relative;
+
+            .my_ad-container{
+                display: flex;
+                flex-flow: column;
+                // border: dashed  7px $brand-dark-grey;
+                border-radius: $border-radius-xl;
+                background: $white;
+                padding: 37px;
+                height: 100%;
+                width: 100%;
+    
+                .my_ad-title{
+                    margin-top: 0px;
+                    font-size: map-get($font-sizes , 'xxl');
+                    color: $brand-red;
+                }
+                .my_ad-info{
+                    margin-top: 30px;
+                    font-size: map-get($font-sizes , 'l');
+                    color: $brand-black;
+                }
+                .my_ad-interesting-point{
+                    margin-top: 15px;
+                    font-size: map-get($font-sizes , 'l');
+                    color: $brand-grey;
+                    
+                }
+                .my_ad-action{
+                    margin-top: 40px;
+                     background: $brand-red;
+                     font-size: map-get($font-sizes , 's');
+                     padding: 10px 15px;
+                     border-radius: $border-radius;
+                     text-align: center;
+
+                     &:hover{
+                        color: $white; 
+                     }
+                }
+            }
+        }
+    }
+   
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .article_body_ad-desktop{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}

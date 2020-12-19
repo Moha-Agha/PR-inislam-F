@@ -1,0 +1,104 @@
+.sidenav {
+  height: 100%;
+  width: 360px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right:  0;
+  background-color: $brand-black;
+  overflow-x: hidden;
+  transition: 0.6s;
+  @include add-shadow-seidnav();
+  transform: translateX(500px);
+  padding: 70px 30px 0 30px ;
+ 
+  a {
+    text-decoration: none;
+    font-size: map-get($font-sizes, 'xxl' );
+    font-weight:  $font-weight-bold;
+    color: $white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav_head{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    align-items: center;
+    span {
+      font-size: map-get($font-sizes, 'm' );
+      font-weight: $font-weight-normal;
+      color: $white;
+      display: inline-block;
+      padding:0 5px 0 5px;
+
+      &:hover{
+        color: $brand-red;
+        cursor: pointer;
+      }
+      :first-child{
+        padding-left: 0px;
+      }
+    }
+
+    .icon-circle{
+      position: absolute;
+      right: 25px;
+    }
+  }
+
+  .sidenav_line{
+    width: 100%;
+    height: 2px;
+    margin: 30px 0 20px 0;
+    background: $white;
+    opacity: 0.3;
+  }
+
+  .admin-nav{
+    margin: 20px auto 10px auto;
+    opacity: 0.3;
+
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin-top: 10px;
+      background: $white;
+    }
+  }
+}
+
+.sidenavOpen {
+  transform: translateX(0);
+  transition: 0.5s;
+}
+
+
+.sidenav a:hover {
+  color: $brand-red;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.disable-link{
+  color: $darker-grey !important;
+  cursor: default;
+}
+
+.active-label{
+  color: $brand-red !important;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

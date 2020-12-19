@@ -1,0 +1,36 @@
+.header-of-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(758px, 2fr) minmax(364px, 1fr));
+
+    column-gap: 30px;
+    justify-content: center;
+    margin: 20px auto 60px auto; 
+    padding: 0;  
+}
+
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .header-of-section{
+         display: flex;
+         flex-flow: column nowrap;
+         margin-bottom: 30px; 
+    }
+  }
+  
+  // Tablet
+  @media all and (max-width: 1200px) and (min-width: 701px) {
+  
+  }
+  
+  // Desktop
+  @media all and (max-width: 1366px) and (min-width: 1201px) {
+  
+  }
+  
+  // X Desktop
+  @media all and  (min-width: 1367px) {
+  
+  }
+  

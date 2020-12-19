@@ -1,0 +1,19 @@
+footer{
+  margin: 10% auto 40px auto;
+
+
+  .copyright{
+    direction: rtl;
+    font-size: map-get($font-sizes , 'xs' );
+    font-weight: bold;
+    color: $violett;
+    margin-top: 18px;
+    p{
+      margin-bottom: 4px;
+    }
+  }
+}
+
+
+
+

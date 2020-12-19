@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.navbar_items{
+    display: flex;
+    flex-flow: row nowrap;
+
+    div{
+      &:first-child{
+          margin-right: 15px;
+      }
+    }
+}
+
+
+ // X Desktop
+ @media all and (max-width: 1920px) and (min-width: 1367px) {
+    .navbar{
+        padding-top: 109px;
+    }
+ 
+ }

@@ -1,0 +1,13 @@
+.back-arrow{
+    margin: 30px 0  ;
+    font-size: map-get($font-sizes, 'm' );
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    color: $brand-grey;
+    cursor: pointer;
+    i{
+        margin-right: 15px;
+        font-size: map-get($font-sizes, 'xl' );
+    }
+}

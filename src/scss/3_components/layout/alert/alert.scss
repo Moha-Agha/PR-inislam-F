@@ -1,0 +1,36 @@
+.alert {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: fixed;
+  z-index: 100000000;
+  color: $white;
+  padding: 15px  25px 15px 15px;
+  border-radius: $border-radius;
+  top: 50px;
+  opacity: 0.95;
+
+  i{
+    padding:0 10px;
+    margin-right: 10px;
+
+    &:hover{
+      color: $dark-grey;
+    }
+
+  }
+ 
+}
+
+.alert-error{
+  background: $red;
+}
+.alert-ok{
+  background: $green;
+}
+.alert-info{
+  background: $blizzard;
+}
+.alert-warning{
+  background: $orange;
+}

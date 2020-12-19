@@ -1,0 +1,98 @@
+.article-motivators{
+
+} 
+
+ 
+ // Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+  .article-motivators{
+    overflow: hidden;
+  } 
+
+  
+  .article-motivators-contener-without-slider{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: center;
+    align-items: center;
+
+    .article-motivator{
+      flex-shrink: 0;
+      max-height: 440px;
+      max-width: 300px;
+      margin: auto auto 20px auto;
+      }
+
+    }
+
+  .article-motivators-contener, .article-motivators-contener8{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px 0 10px 0;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    }
+
+    .article-motivators-contener::-webkit-scrollbar, .article-motivators-contener8::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      .article-motivators-contener::-webkit-scrollbar-thumb , .article-motivators-contener8::-webkit-scrollbar-thumb {
+        background: $black;
+        border-radius: 10px;
+      }
+      .article-motivators-contener::-webkit-scrollbar-track, .article-motivators-contener8::-webkit-scrollbar-track {
+        background: transparent;
+      }
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and  (min-width: 1201px) {
+
+  .article-motivators-contener, .article-motivators-contener-without-slider{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 364px));
+    column-gap: 30px;
+    row-gap: 30px;
+    // justify-content: center;
+    // margin: auto; 
+    padding: 0;  
+  }
+  .article-motivators-contener8{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(273px, 273px));
+    column-gap: 20px;
+    row-gap: 20px;
+    // justify-content: center;
+    // margin: auto; 
+    padding: 0;  
+
+    .article-motivator {
+      .article_footer {
+        margin-top: 40%;
+        }
+        .article_tags{
+          .tag{
+            max-width: 104px;
+          }
+        }
+     .article_title {
+       font-size: 18px;
+       height: 60px;
+       margin: 10px 0 30px auto;
+        } 
+    }
+
+  
+  }
+
+}
+

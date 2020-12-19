@@ -1,0 +1,35 @@
+@import "../../2_base/0_index.scss";
+
+.about_title{
+       margin: 80px auto 80px auto ;
+    .about_subtitle{
+        color: $brand-black;
+        -webkit-text-stroke: 1px $brand-grey;
+    }
+}
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .about_title{
+        font-size: 40px;
+        margin: 60px auto auto auto ;
+ }    
+  }
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+  }
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+  }
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+  }
+
+

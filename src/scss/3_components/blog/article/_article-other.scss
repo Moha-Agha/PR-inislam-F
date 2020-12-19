@@ -1,0 +1,126 @@
+.article_other{
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin: 60px auto 20px auto;
+    border-bottom: solid 0.1rem #222121;
+    
+    .article_other-sharing{
+        display: flex;
+        flex-flow: row wrap;
+    
+        i{
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            border-radius: 50%;
+            margin: 5px 6px;
+            border: solid 0.249rem $dark-grey;
+            color: $dark-grey;
+        }
+    
+        .aicon-whatsapp{
+            font-size: 32px;
+            border: none;
+        }
+        .aicon-facebook{
+            font-size: 16px;
+            line-height: 26px;
+        }
+        .aicon-twitter{
+            font-size: 17px;
+            line-height: 27px;
+        }
+        .aicon-link{
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        .aicon-link:hover + .sharing-tooltip{
+            visibility: visible; 
+     }
+
+    }
+
+
+    .article_like{
+        display: inline-flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        color: $grey;
+        font-size: map-get($font-sizes, 's' );
+        span{
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .article_heart-like{
+            cursor: pointer;
+            position: relative;
+            transform: translateY(0px) ;
+            transition: ease-in-out 0.5s all;
+           span{
+            font-size: map-get($font-sizes, 'xs' );
+            font-weight: bold;
+              color: $white;
+               position: absolute;
+               z-index: 2;
+               text-align: center;
+               padding-top: 4px;
+               width: 52%;
+           } 
+           .aicon-heart-like{
+            color: $brand-black;
+            -webkit-text-stroke: 1px $brand-red;
+         
+            font-size: 45px;
+        }
+        &:hover{
+            .aicon-heart-like{
+                color: #ff0000;
+            }   
+        }
+        }
+        .article_heart-liked{
+            cursor: not-allowed;
+            transition: ease-in-out 0.5s all;
+           .aicon-heart-like{
+            color: $brand-red;
+        }
+        &:hover{ 
+            .aicon-heart-like{
+                color: $brand-red;
+            }
+            transform: translateY(5px) ; 
+        }
+        }
+        
+    }
+}
+
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+   
+  }
+  
+  // Tablet
+  @media all and (max-width: 1200px) and (min-width: 701px) {
+  
+  }
+  
+  // Desktop
+  @media all and (max-width: 1366px) and (min-width: 1201px) {
+  
+  }
+  
+  // X Desktop
+  @media all and  (min-width: 1367px) {
+  
+  }
+  

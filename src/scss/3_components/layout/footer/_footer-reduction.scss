@@ -1,0 +1,86 @@
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+ 
+   .reduction-footer{
+      margin: 100px auto 60px auto;
+     h1{
+        text-transform: none;
+     }
+  
+     .reduction-footer_arrow{
+        display: block;
+        width: 110px;
+        height: 110px;
+        border: solid 10px $brand-red;
+        border-radius: 50%;
+        color: $brand-red;
+        text-align: center;
+        line-height: 140px;
+        margin: 30px auto;
+        i{
+           font-size: map-get($font-sizes , 'xxxl' );
+        }
+     }
+  }
+       
+ }
+
+// Tablet and Desktop and X Desktop
+@media all and  (min-width: 701px) {
+
+   .reduction-footer{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      
+
+      margin: 100px auto 60px auto;
+     h1{
+        text-transform: none;
+        
+     }
+  
+     .reduction-footer_arrow{
+      flex-shrink: 0;
+        display: block;
+        width: 110px;
+        height: 110px;
+        border: solid 10px $brand-red;
+        border-radius: 50%;
+        color: $brand-red;
+        text-align: center;
+        line-height: 140px;
+        margin: 30px auto;
+        i{
+           font-size: map-get($font-sizes , 'xxxl' );
+        }
+     }
+  }
+ 
+ }
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+   .reduction-footer{ 
+      margin: 130px auto 100px auto;
+      h1{
+         max-width: 900px;
+      }
+    
+   }
+ 
+ }
+
+// X Desktop
+@media all and (min-width: 1367px) {
+
+   .reduction-footer{ 
+      margin: 130px auto 100px auto;
+      h1{
+         max-width: 900px;
+      }
+    
+   }
+
+ }

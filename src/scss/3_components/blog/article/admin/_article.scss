@@ -1,0 +1,12 @@
+
+.button-article{margin: 40px 0px auto 0px !important;}
+
+.admin-article{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: center;
+
+}

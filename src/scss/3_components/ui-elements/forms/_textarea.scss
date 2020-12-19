@@ -1,0 +1,29 @@
+.textarea{
+           margin: auto auto 25px auto;
+           resize: none;
+           height: 40px;
+           width: 100%;
+           border: 0;
+           border-bottom: 1px solid  $brand-grey;
+           outline: 0;
+           color: $brand-grey;
+           font-size:  map-get($font-sizes, 'm');
+           background: transparent;             
+         }
+                
+
+         textarea:hover,
+         textarea:focus,
+         textarea:-webkit-autofill {
+             height: auto;
+             width: 100%;
+            border: 0;
+            border-bottom: 1px solid  $brand-grey;
+            outline: 0;
+            background: transparent;
+             -webkit-text-fill-color: $white;
+             -webkit-box-shadow: 0 0 0px 1000px $brand-black inset;
+             transition: background-color 5000s ease-in-out 0s;
+                                          }
+    
+    

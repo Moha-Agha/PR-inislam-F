@@ -1,0 +1,32 @@
+.social-media{
+    a{
+        display: inline-block;
+        font-size: 19px;
+        margin-right: 10px;
+        
+        i{
+            color: $brand-grey;
+        }
+    }
+}
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+
+  }
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+ 
+  }
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+  }
+
+// X Desktop
+@media all and (max-width: 1920px) and (min-width: 1367px) {
+ 
+  }

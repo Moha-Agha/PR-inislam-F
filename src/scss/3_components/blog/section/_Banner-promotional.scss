@@ -1,0 +1,89 @@
+.Banner-promotional{
+
+  max-width: 364px;
+  background-color: $brand-dark-grey;
+  padding: 35px 35px 35px 20px;
+  border-radius: $border-radius-xl;
+  text-align: center;
+
+  h2{
+    font-size: map-get($font-sizes , 'xl' );
+    text-transform: uppercase;
+    color: $white;
+    margin:  20px auto 10px auto;
+  }
+  p{
+    font-size: map-get($font-sizes , 's' );
+    color: $grey;
+    opacity: 0.8;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+
+  .secondary-button{
+    padding: 15px 20px;
+  }
+
+  .sub-link{
+    display: block;
+    margin: 10px auto 10px auto ;
+    font-size: map-get($font-sizes , 'xs' );
+    color: $brand-grey;
+  }
+
+} 
+
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+  .Banner-promotional{
+
+    min-width: 300px;
+    background-color: $brand-black;
+    padding: 0;
+    margin: 20px 0 0 -5px;
+  
+    h2{
+     display: none;
+    }
+    p{
+      display: none;
+    }
+  
+    .secondary-button{
+      width: 100%;
+      margin: 0;
+    }
+  
+    .sub-link{
+      display: block;
+      margin: 10px auto 0 auto ;
+    }
+  
+  } 
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}
+
+ 
+  
+  
+  
+ 
+  
+ 
+          

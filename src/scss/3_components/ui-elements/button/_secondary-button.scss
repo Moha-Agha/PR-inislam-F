@@ -1,0 +1,37 @@
+.secondary-button{
+    display: inline-block;
+    background-color:$grey; 
+    color: $brand-dark-grey;
+    font-size: map-get( $font-sizes, 's' );
+    text-transform: uppercase;
+    padding: 10px 25px;
+    margin: auto 10px auto 10px;
+    text-align: center;
+    white-space: nowrap;
+ 
+    &:first-child{
+        margin: auto 10px  auto 0px;
+    }
+    border-radius: $border-radius-lg;
+    @include add-shadow-xl();
+    transition: ease-in-out 0.2s all;
+
+    &:hover{
+      color: $white;
+      background-color:$brand-red; 
+    }
+
+}
+
+
+  .circle-secondary-button{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    font-size: map-get( $font-sizes, 's' );
+    }

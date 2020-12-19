@@ -1,0 +1,15 @@
+.back-to{
+    display: inline-block;
+    font-size: map-get( $font-sizes, 'xs' );
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-top: 40px;
+    transition: ease-in-out 0.2s all;
+    a{color: $darker-grey;}
+    i{margin-right: 10px;}
+    &:hover{
+      a{color: $white;}
+      i{color: $brand-red;}
+    }
+
+}
