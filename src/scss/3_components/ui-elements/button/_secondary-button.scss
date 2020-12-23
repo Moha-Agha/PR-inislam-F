@@ -1,10 +1,11 @@
 .secondary-button{
     display: inline-block;
-    background-color:$grey; 
+    background-color:$brand-white; 
     color: $brand-dark-grey;
     font-size: map-get( $font-sizes, 's' );
+    font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 25px;
+    padding: 12px 17px;
     margin: auto 10px auto 10px;
     text-align: center;
     white-space: nowrap;
@@ -13,12 +14,14 @@
         margin: auto 10px  auto 0px;
     }
     border-radius: $border-radius-lg;
-    @include add-shadow-xl();
-    transition: ease-in-out 0.2s all;
+    transition: ease-in-out 0.3s all;
 
     &:hover{
-      color: $white;
-      background-color:$brand-red; 
+      -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+      color: $brand-white;
+      background-color:$brand-color-darker; 
+      @include add-shadow-xl();
     }
 
 }

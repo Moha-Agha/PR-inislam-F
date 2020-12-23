@@ -1,5 +1,5 @@
 import React from "react";
-import PremiumButton from "../../0_0_uiElements/button/PremiumButton"
+import SecondaryButton from "../../0_0_uiElements/button/SecondaryButton"
 
 const BannerPromotional = ({ TextTitle = '', TextBody }) => {
   return (
@@ -10,9 +10,9 @@ const BannerPromotional = ({ TextTitle = '', TextBody }) => {
       <p>
         {TextBody}
       </p>
-      <PremiumButton title='SCHREIB MIR JETZT!' goTo='/contact' />
+      <SecondaryButton title='أدعم الموقع الأن' goTo='/contact' />
       <span className="sub-link">
-        Kostenlos Beratung für Startup
+        بالضعط على الزر ستنتقل إلى موقع البي بال
       </span>
     </div>
   );

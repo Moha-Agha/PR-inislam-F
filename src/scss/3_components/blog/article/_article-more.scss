@@ -1,6 +1,7 @@
 
 .article_more{
-    max-width: 560px;
+    direction: $direction;
+    
     margin-top: -50px;
     
     h2{
@@ -8,9 +9,11 @@
         font-size: map-get($font-sizes, 's' );
         margin-bottom: 30px;
         text-align: center;
+        max-width: 560px;
     }
 
     .article_more_blogs{
+        max-width: 560px;
         .article-motivators-contener{
             // display: flex;
             // flex-flow: row nowrap;
@@ -22,9 +25,9 @@
     column-gap: 5px;
 
         .article-motivator{
-            margin:0 0 0 10px;
+            margin:0 10px 0 0 ;
         &:first-child{
-            margin:0 10px 0 0;
+            margin:0 0 0 10px ;
         }
         .article_tags{ 
             .tag{

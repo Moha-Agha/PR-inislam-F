@@ -1,11 +1,11 @@
 .article_other{
     width: 100%;
     display: flex;
-    flex-flow: row-reverse nowrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
-    margin: 60px auto 20px auto;
+    margin: 0 auto 20px auto;
     border-bottom: solid 0.1rem #222121;
     
     .article_other-sharing{
@@ -19,8 +19,8 @@
             text-align: center;
             border-radius: 50%;
             margin: 5px 6px;
-            border: solid 0.249rem $dark-grey;
-            color: $dark-grey;
+            border: solid 0.249rem rgba( $brand-color, 0.75);
+            color: rgba( $brand-color, 0.8);
         }
     
         .aicon-whatsapp{
@@ -52,7 +52,7 @@
         flex-flow: row nowrap;
         align-items: center;
 
-        color: $grey;
+        color: $brand-color;
         font-size: map-get($font-sizes, 's' );
         span{
             font-weight: bold;
@@ -66,34 +66,45 @@
            span{
             font-size: map-get($font-sizes, 'xs' );
             font-weight: bold;
-              color: $white;
+              color: $brand-color;
                position: absolute;
                z-index: 2;
                text-align: center;
                padding-top: 4px;
-               width: 52%;
+               width: 100%;
            } 
            .aicon-heart-like{
-            color: $brand-black;
-            -webkit-text-stroke: 1px $brand-red;
+            color: $brand-white;
+            -webkit-text-stroke: 1px $brand-color;
          
             font-size: 45px;
+            transition: ease-in-out 0.5s all;
         }
         &:hover{
+            transform: translateY(-5px) ; 
+            span{
+                color: $brand-white;
+            }
             .aicon-heart-like{
-                color: #ff0000;
+                -webkit-text-stroke: 1px  #ff0000;
+                color: $brand-red;
             }   
         }
         }
         .article_heart-liked{
             cursor: not-allowed;
             transition: ease-in-out 0.5s all;
+            span{
+                color: $brand-white;
+            }
            .aicon-heart-like{
-            color: $brand-red;
+            -webkit-text-stroke: 1px  #ff0000;
+            color: #ff0000;
         }
         &:hover{ 
             .aicon-heart-like{
-                color: $brand-red;
+                -webkit-text-stroke: 1px  #ff0000;
+                color:  #ff0000;
             }
             transform: translateY(5px) ; 
         }

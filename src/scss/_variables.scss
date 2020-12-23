@@ -30,20 +30,31 @@ $transparent: transparent;
 $violett: #7d79b1;
 $white: #ffffff;
 
-
+// brand color
 $brand-red: #FA163F;
 $brand-black: #151414;
 $brand-grey: #8A8A8A;
 $brand-dark-grey: #222121;
 
 
-$dark-tag:#343a4081;
-$gradient-dark : linear-gradient(180deg, rgba(21,20,20,0) 0%, rgba(21,20,20,0.15) 30%, rgba(21,20,20,0.8) 70%, rgba(21,20,20,0.95) 100%);
+$brand-color-light: #0000BA;
+$brand-color: #020267;
+$brand-color-dark: #000031;
+$brand-color-darker: #000016;
+$brand-light-grey: #C7C9D3;
+$brand-grey: #444A6C;
+$brand-white: #F8FBFB;
 
-$page-background: #151414;
+
+$dark-tag:#00003131;
+$gradient-dark : linear-gradient(180deg, rgba($brand-color-darker,0) 0%, rgba($brand-color-darker,0.15) 30%, rgba($brand-color-darker,0.8) 70%, rgba($brand-color-darker,0.95) 100%);
+
+$page-background: $brand-white;
 // bootstrap
 $enable-deprecation-messages: true;
 $ignore-warning: false;
+
+$direction: rtl;
 
 $grid-row-columns:0 ;
 

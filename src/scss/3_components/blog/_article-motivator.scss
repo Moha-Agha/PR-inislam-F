@@ -3,12 +3,12 @@
     position: relative;
     border-radius: $border-radius-xl;
     display: inline-block;
-     @include add-shadow-xl();
+     @include add-shadow-xs();
      transition: all ease-in-out 0.2s;
 
      &:hover{
-       transform: translateY(-10px);
-       @include add-shadow-service();
+       transform: translateY(-5px);
+       @include add-shadow-xl();
      }
     
     .article_motivator-content{
@@ -16,10 +16,12 @@
      flex-flow: column nowrap;
      align-content: space-between;
      padding: 25px 25px 20px 25px;
+
+    
     }
 
     .article_social-media{
-     direction: rtl;
+     direction: $direction;
 
         a{
             display: inline-block;
@@ -29,7 +31,7 @@
             margin: 0 0 20px 7px;   
             text-align: center;
            i{
-            color: $dark-grey;
+            color:rgba( $brand-white, .6);
             
            }
            .aicon-youtube{
@@ -55,16 +57,16 @@
     }
 
     .article_tags{ 
-      
+        direction: $direction;
         .tag{
             display: inline-block;
             border-radius: $rounded-pill;
             background: $dark-tag;
             padding: 3px 10px;
-            margin-right: 7px;   
+            margin-left: 7px;   
             text-align: center;
             line-height: 26px;
-            color: $dark-grey;
+            color:rgba( $brand-white, .6);
             font-size: map-get($font-sizes, 's' );
             max-width: 130px;
             white-space: nowrap;
@@ -79,16 +81,17 @@
     }
 
     .article_title{
+        direction: $direction;
         display: block;
         color: $white;
         font-size: map-get($font-sizes, 'l' );
         font-weight: bold;
-        margin-bottom: 25px;
-        height: 90px;
+        margin: 10px 0 25px 0;
+        height: 110px;
         transition: text-decoration 0.4s ease-in-out;
           &:hover {
             text-decoration: underline;
-            text-decoration-color: $brand-red;
+            text-decoration-color: $brand-color;
           }
     }
 
@@ -96,13 +99,13 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        margin-bottom: 0;
+        margin-bottom: 5px;
         a:hover{
             color: $blue;
         }
         .article_info_item{
             font-size: map-get($font-sizes, 's' );
-            color: $dark-grey;
+            color:rgba( $brand-white, .6);
             padding: 5px;
         }
     }
@@ -123,7 +126,7 @@
             bottom: 0;
             z-index: 1;
             display: block;
-            height: 85%;
+            height: 90%;
             width: 100%;
             border-radius: $border-radius-xl;
             background: $gradient-dark;
@@ -169,11 +172,13 @@
            .article_title{
             margin: 10px auto 40px auto;
         }
-
         .article_tags{ 
             .tag{
                 max-width: 100px;
             }
+        }
+        .article_info{
+            margin-bottom: 0px;
         }
     } 
   }

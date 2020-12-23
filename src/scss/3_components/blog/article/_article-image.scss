@@ -1,7 +1,8 @@
 .article_hero-image{
     position: relative;
     margin-bottom: 20px;
-    direction: ltr;
+    direction: $direction;
+    max-width: 975px;
 
     img{
         background: $grey;
@@ -9,9 +10,10 @@
         width: 100%;
         height: 533px;
         object-fit: cover;
+        max-width: 899px;
     }
     .article_image_image-info{
-        color: $darker-grey;
+        color: rgba($brand-color-light,  0.3);
         font-size: map-get($font-sizes, 'xs' );
     }
 }

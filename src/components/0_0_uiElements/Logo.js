@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 
 
 
-const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
+const Logo = ({ logo = 'logo_nav', type = '.png', slogan }) => {
 
   const [path, setPath] = useState('');
-  const [slogan, setSlogan] = useState('');
 
   useEffect(() => {
     resizeScreen();
@@ -14,7 +13,6 @@ const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
 
   function resizeScreen() {
     let fullPath
-    let text
 
     if (window.innerWidth <= 750) {
       fullPath = require('../../media/image/' + logo + '_mobile' + type);
@@ -23,17 +21,17 @@ const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
       fullPath = require('../../media/image/' + logo + type);
     }
 
-    setSlogan(text)
     setPath(fullPath)
   }
 
 
   return (
     <a href='/' className='logo'>
-      {path ? <img src={path} alt="niceTwice logo" /> : <h2 className='logo-title'>niceTwice</h2>}
-      <h5>{slogan}</h5>
+      {path ? <img src={path} alt="inislam logo" /> : <h2 className='logo-title'>inislam.net</h2>}
+      <p className='slogan'>{slogan && slogan}</p>
     </a >
   );
 };
 
 export default Logo;
+

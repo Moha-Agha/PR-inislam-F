@@ -26,6 +26,7 @@
     }
 
   .article-motivators-contener, .article-motivators-contener8{
+    direction: $direction;
     display: flex;
     flex-flow: row nowrap;
     padding: 10px 0 10px 0;
@@ -58,6 +59,7 @@
 @media all and  (min-width: 1201px) {
 
   .article-motivators-contener, .article-motivators-contener-without-slider{
+    direction: $direction;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 364px));
     column-gap: 30px;
@@ -67,6 +69,7 @@
     padding: 0;  
   }
   .article-motivators-contener8{
+    direction: $direction;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(273px, 273px));
     column-gap: 20px;

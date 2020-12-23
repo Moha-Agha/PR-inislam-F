@@ -1,6 +1,6 @@
 .register{
     @include reset-select();
-    direction: rtl;
+    direction: $direction;
     width: 90%;
     margin: auto;
 

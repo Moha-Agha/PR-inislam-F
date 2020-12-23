@@ -3,13 +3,14 @@
     flex-flow: row nowrap;
     justify-content: space-between; 
     margin-bottom: 20px;
-    direction: ltr;
+    direction: $direction;
+    max-width: 899px;
 
     .article_body_contener{
        max-width: 560px;
   
             line-height: 32px;
-            color: $white;
+            color: $brand-color-dark;
             font-size: map-get($font-sizes, 'm' );
         
        .article_content{
@@ -27,7 +28,7 @@
           h4{ font-size: map-get($font-sizes, 'l' );}
           h5{ font-size: map-get($font-sizes, 'm' );}
           h6{ font-size: map-get($font-sizes, 's' );}
-          p{ font-size: map-get($font-sizes, 'l' );}
+          p{ font-size: map-get($font-sizes, 'm' ); line-height: 38px;}
           .image{
               margin: 10px 0px 0px 0px;
           }

@@ -41,7 +41,7 @@ const Section = (props) => {
   } else if (section !== null) {
     return (<>
       <div className='container'>
-        <BackTo to='/' title='Zurück zum Home' />
+        <BackTo to='/' title='العودة إلى الصفحة الرئيسية' />
         <HeaderOfSection sectionInfo={section[0]} />
       </div>
 

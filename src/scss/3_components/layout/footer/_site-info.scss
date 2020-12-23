@@ -2,7 +2,7 @@
    position: relative;
    width: 270px;
    text-align: center;
-   direction: rtl;
+   direction: $direction;
  
    .logo{
       display: block;

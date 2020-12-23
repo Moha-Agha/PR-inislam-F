@@ -1,27 +1,48 @@
 .sections-tag{
-    display: inline-block;
-    background-color: $brand-dark-grey;
-    color: $white;
-    font-size: map-get( $font-sizes, 's' );
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba($white, 0.8);
+    color: $brand-color-dark;
+    border: solid 1px rgba($brand-color-dark, 0.05);
+    font-size:16px;
     border-radius: $border-radius-xl;
-    padding: 8px 5px;
-    margin: 15px 15px auto 0;
-    @include add-shadow-xl();
+    padding: 11px 13px;
+    @include add-shadow-s();
+
+    max-width: 145px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    transition: all ease-in-out 0.3s;
+    &:last-child{
+      margin-left: 0;
+    }
+
+    &:hover{
+      color: $brand-white;
+      background-color:$brand-color-dark;
+
+      .sections-tag_number{
+        color: rgba( $brand-white, .5);
+           }
+    }
 
     .sections-tag_title{
             display: inline-block;
-            margin: auto 15px auto 15px;
         }
-    
+
          .sections-tag_number{
-                display: none;
-                max-width: 30px ;
-                max-height: 35px ;
-                background: $brand-black;
+                max-width: 25px ;
+                max-height: 25px ;
+                background: rgba( $brand-light-grey, .3);
+                color: rgba( $brand-color, .3);
                 border-radius: $border-radius-circal; 
                 text-align: center;
-                margin-left: 10px;
-                padding: 3px 6px;
+                margin-left: 6px;
+                padding: 1px 7px;
+                transition: all ease-in-out 0.3s;
             }
     
 }

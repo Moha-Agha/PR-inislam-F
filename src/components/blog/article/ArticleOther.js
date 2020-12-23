@@ -10,7 +10,7 @@ const ArticleOther = ({ likes, id, articleTitle, articleSlug }) => {
 
   const [copy, setCopy] = useState('kopieren')
 
-  const shareUrl = 'http://nicetwice.de/article/' + articleSlug;
+  const shareUrl = 'http://inislam.net/article/' + articleSlug;
   const title = articleTitle;
 
   const [newLike, setNewLike] = useState();
@@ -36,7 +36,6 @@ const ArticleOther = ({ likes, id, articleTitle, articleSlug }) => {
     <div className="article_other">
 
       <div className="article_other-sharing">
-
 
         <WhatsappShareButton
           url={shareUrl}
@@ -70,7 +69,7 @@ const ArticleOther = ({ likes, id, articleTitle, articleSlug }) => {
       </div>
 
       <div className="article_like">
-        <span>{hasLiked ? 'Danke' : 'Liken'}</span>
+        <span>{hasLiked ? 'شكراً' : 'الإعجاب'}</span>
 
         <span onClick={() => { handleNewLike(id) }} className={hasLiked ? 'article_heart-like article_heart-liked' : 'article_heart-like'}>
           <span>{newLike}</span> <i className="aicon-heart-like"></i>

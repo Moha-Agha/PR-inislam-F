@@ -27,37 +27,43 @@
                 flex-flow: column;
                 // border: dashed  7px $brand-dark-grey;
                 border-radius: $border-radius-xl;
-                background: $white;
+                background: $brand-color;
                 padding: 37px;
                 height: 100%;
                 width: 100%;
     
                 .my_ad-title{
-                    margin-top: 0px;
-                    font-size: map-get($font-sizes , 'xxl');
-                    color: $brand-red;
+                    margin-top: 20px;
+                    font-size: 27px;
+                    line-height: 39px;
+                    color: $brand-white;
                 }
                 .my_ad-info{
                     margin-top: 30px;
-                    font-size: map-get($font-sizes , 'l');
-                    color: $brand-black;
+                    font-size: map-get($font-sizes , 'm');
+                    line-height: 36px;
+                    color: rgba($brand-white, 0.8);
                 }
                 .my_ad-interesting-point{
                     margin-top: 15px;
-                    font-size: map-get($font-sizes , 'l');
-                    color: $brand-grey;
+                    font-size: map-get($font-sizes , 'xs');
+                    color: rgba($brand-white, 0.6);
                     
                 }
                 .my_ad-action{
                     margin-top: 40px;
-                     background: $brand-red;
+                     background: $brand-white;
+                     color: $brand-color-dark;
                      font-size: map-get($font-sizes , 's');
-                     padding: 10px 15px;
+                     padding: 15px 15px;
                      border-radius: $border-radius;
                      text-align: center;
+                     transition: ease-in-out 0.2s all;
 
                      &:hover{
-                        color: $white; 
+                         transform: translateY(-4px);
+                        color: $brand-white; 
+                        background: $brand-color-dark;
                      }
                 }
             }

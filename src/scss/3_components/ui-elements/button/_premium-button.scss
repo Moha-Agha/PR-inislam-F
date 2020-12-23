@@ -2,25 +2,49 @@
   position: relative;
   display: inline-block;
     width: auto;
-    background-color:$brand-red; 
-    color: $white;
+    background-color:$brand-color; 
+    color: $brand-white;
     font-size: map-get( $font-sizes, 's' );
-    font-weight: normal;
+    font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 25px;
-    margin: auto 10px auto 10px;
+    padding: 10px 15px;
     text-align: center;
     white-space: nowrap;
     border-radius: $border-radius-lg;
     cursor: pointer;
-    @include add-shadow-xl();
+    @include add-shadow-xs();
     transition: ease-in-out 0.2s all;
 
     &:hover{
-      color: $brand-red ;
-      background-color:$grey; 
+      color: $brand-white ;
+      background-color:$brand-color-dark; 
+      @include add-shadow-s();
     }
 
+}
+
+.premium-outline-button{
+  position: relative;
+  display: inline-block;
+    width: auto;
+    background-color:none; 
+    border: solid 2px $brand-color;
+    color: $brand-color;
+    font-size: map-get( $font-sizes, 's' );
+    text-transform: uppercase;
+    padding: 9px 14px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: $border-radius-lg;
+    cursor: pointer;
+    @include add-shadow-xs();
+    transition: ease-in-out 0.2s all;
+
+    &:hover{
+      color: $brand-white ;
+      background-color:$brand-color-dark; 
+      @include add-shadow-s();
+    }
 }
 
 .circle-premium-button{

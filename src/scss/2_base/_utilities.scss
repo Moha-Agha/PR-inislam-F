@@ -157,7 +157,7 @@ $utilities: (
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: $brand-grey 2px solid;
+  border: $brand-color 2px solid;
   line-height: 40px;
   text-align: center;
   color: $brand-grey;
@@ -166,31 +166,31 @@ $utilities: (
 
 // Text Selection Color
 ::-moz-selection { /* Code for Firefox */
-  color: $white;
-  background:$brand-red;
+  color: $brand-white;
+  background:$brand-color-darker
 }
 
 ::selection {
-  color: $white;
-  background:$brand-red;
+  color: $brand-white;
+  background:$brand-color-darker;
 }
 
 // scrollbar
 
 body::-webkit-scrollbar-track
 {
-  background-color: $brand-black;
+  background-color: $brand-white;
 
 }
 
 body::-webkit-scrollbar
 {
 	width: 10px;
-	background-color: $brand-black;
+	background-color: $brand-white;
 }
 
 body::-webkit-scrollbar-thumb
 {
-  background-color: $white;
+  background-color: $brand-grey;
   border-radius: 10px;
 }

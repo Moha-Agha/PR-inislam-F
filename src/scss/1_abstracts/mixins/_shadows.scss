@@ -6,6 +6,9 @@
   box-shadow: 0 0.5rem 1.5rem 0 rgba(20, 139, 246, 0.18);
 }
 
+@mixin add-shadow-xs() {
+  box-shadow: 0 3px 10px 0 rgba(240, 98, 40, 0.07);
+}
 @mixin add-shadow-s() {
   box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.08);
 }

@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 const ArticleADDesktop = () => {
-  const adTitel = 'Immer noch keine eigene Webseite?'
-  const adInfo = 'E-Commerce-Website Firmenwebsite Restaurantwebsite Blog-Website oder Wünsche realisieren.'
-  const adInterestingPoint = 'Deine Blog-Website für nur 30€/Monat !'
-  const adAction = 'Schreib mir eine Nachricht!'
+  const adTitel = 'هل تجد محتوى هذا الموقع مفيد لك؟'
+  const adInfo = 'مساعدتك في دعم تطوير الموقع برمجياً و توفير القدرة على الترويج. يحمل تأثير كبير في نشر هذه الأفكار وخلق وعي و مجتمع أفضل. مجتمع افضل, راحة اكثر لك ولعائلتك.'
+  const adInterestingPoint = 'بضغط الزر تنتقل إلى موقع البي بال'
+  const adAction = 'إدعم الموقع الأن'
   return (
     <>
       {/* <div className="article_body_ad_info">

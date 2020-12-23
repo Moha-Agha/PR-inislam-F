@@ -3,7 +3,7 @@ footer{
 
 
   .copyright{
-    direction: rtl;
+    direction: $direction;
     font-size: map-get($font-sizes , 'xs' );
     font-weight: bold;
     color: $violett;

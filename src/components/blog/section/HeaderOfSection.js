@@ -13,7 +13,7 @@ const HeaderOfSection = ({ sectionInfo }) => {
   return (
     <div className="header-of-section">
       <HeaderInfo title={title} description={description} />
-      <BannerPromotional TextTitle={'Suchst du Profi?'} TextBody={'Ich helfe dir mit meiner groß Erfahrung in ' + title + ' Bereich'} />
+      <BannerPromotional TextTitle={'دعم الموقع'} TextBody={'تطوير ألية عمل الموقع وتمويل البحوث الجديدة يحتاج دعمك'} />
     </div>
   );
 

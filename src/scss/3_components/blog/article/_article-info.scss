@@ -1,10 +1,12 @@
 .article_info{
-    direction: ltr;
+    direction: $direction;
     display: flex;
     flex-flow:  nowrap row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+
+    max-width: 899px;
 
  .article_author{
     display: flex;
@@ -20,7 +22,7 @@
        div{
         margin: auto 10px;
         .article_author_name{
-            color: $white;
+            color: rgba($brand-grey, 0.9);
             font-size: map-get($font-sizes, 'xs' );
             font-weight: bold;
             display: flex;
@@ -31,14 +33,14 @@
                 width: 30px;
                 height: 5px;
                 display: block;
-                background-color: $brand-red;
+                background-color: $brand-light-grey;
                 margin: 8px 0 5px auto ;
                 border-radius: $rounded-pill;
-                direction: rtl;
+                direction: $direction;
             }
         }
         .article_author_publish-date{
-            color: $dark-grey;
+            color: rgba($brand-grey, 0.6);
             font-size: map-get($font-sizes, 'xs' );
         }
        }
@@ -46,21 +48,22 @@
 }
 
 .article_reading-duration {
-    background: $brand-dark-grey;
+    background: rgba($brand-light-grey, 0.7);
     border-radius: $rounded-pill;
-    padding: 8px 15px;
-    color: $white;
+    padding: 10px 15px;
+    color: rgba($brand-grey, 0.9); 
     display: inline-flex;
     flex-flow: row nowrap;
     align-items: center;
     text-align: center;
-    opacity: 0.8;
 
     .aicon-clock{
         display: inline-block;
-        color: $white;
+        color: rgba($brand-grey, 1);
         font-size: map-get($font-sizes, 's' );
-    }
+        margin: 0 0 0 6px;
+    } 
+    
     span{
         font-size: map-get($font-sizes, 'xs' );
         margin-left: 6px;  
@@ -69,27 +72,35 @@
 
 .article_send-me-to{
     display: block;
-    background: $brand-red;
+    background:  $brand-color-dark;
     border-radius: $rounded-pill;
-    padding: 8px 15px;
-    margin-left: 10px;
+    padding: 10px 15px;
+    margin-right: 10px;
     display: inline-flex;
     flex-flow: row nowrap;
     align-items: center;
     text-align: center;
     font-size: map-get($font-sizes, 'xs' );
+    transition: ease-in-out 0.2s all;
+
+    &:hover{
+        transform: translateY(-4px);
+    }
  
       i{
         display: inline-block;
-        color: $white;
+        color: $brand-white;
         font-size: map-get($font-sizes, 'm' );
+        margin: 0 0 0 6px;
       }
       span{   
-        color: $white;
-        margin-left: 6px;  
+        color:  $brand-white;
+         } 
+         .aicon-youtube{
+            color:  #FF0000;
          } 
          .aicon-spotify{
-            color: $white;  
+            color:  #1DB954;
          } 
      
 }   

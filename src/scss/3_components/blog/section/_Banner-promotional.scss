@@ -1,8 +1,8 @@
 .Banner-promotional{
 
   max-width: 364px;
-  background-color: $brand-dark-grey;
-  padding: 35px 35px 35px 20px;
+  background-color: $brand-color-dark;
+  padding: 30px ;
   border-radius: $border-radius-xl;
   text-align: center;
 
@@ -10,25 +10,23 @@
     font-size: map-get($font-sizes , 'xl' );
     text-transform: uppercase;
     color: $white;
-    margin:  20px auto 10px auto;
+    margin:  10px auto 10px auto;
   }
   p{
     font-size: map-get($font-sizes , 's' );
-    color: $grey;
-    opacity: 0.8;
-    line-height: 25px;
+    color: rgba($brand-white,0.8);
+    line-height: 30px;
     margin-bottom: 40px;
   }
 
-  .secondary-button{
-    padding: 15px 20px;
-  }
+ 
 
   .sub-link{
     display: block;
-    margin: 10px auto 10px auto ;
-    font-size: map-get($font-sizes , 'xs' );
-    color: $brand-grey;
+    margin: 10px auto 15px auto ;
+    font-size: 12px;
+    font-weight: normal;
+    color: rgba($grey, 0.6);
   }
 
 } 

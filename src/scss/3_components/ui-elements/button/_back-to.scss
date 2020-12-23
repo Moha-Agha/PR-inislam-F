@@ -1,15 +1,47 @@
 .back-to{
+  direction: $direction;
+
+  @if $direction == rtl {
+  a{
+    display: inline-flex;
+    flex-flow: row ;
+    align-items: center;
+    direction: ltr;
+  }
+  i{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  }  @else {
     display: inline-block;
-    font-size: map-get( $font-sizes, 'xs' );
-    text-transform: uppercase;
-    white-space: nowrap;
-    margin-top: 40px;
-    transition: ease-in-out 0.2s all;
-    a{color: $darker-grey;}
-    i{margin-right: 10px;}
-    &:hover{
-      a{color: $white;}
-      i{color: $brand-red;}
     }
 
-}
+    font-size: map-get( $font-sizes, 's' );
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-top: 30px;
+    transition: ease-in-out 0.2s all;
+    a{
+      position: relative;
+      color: $darker-grey;
+    }
+    i{
+      margin:0 10px 0 10px;
+      transition: ease-in-out 0.2s all;
+    }
+    &:hover{
+      a{
+        color: $brand-color-dark;
+      }
+      i{
+        color:  $brand-color-dark;
+        animation: back-to-arrow-animation linear 0.6s infinite alternate;
+      } 
+    }
+    @keyframes back-to-arrow-animation {
+      from {transform: translateX(0px) scaleX(-1);}
+      to {transform: translateX(5px) scaleX(-1);}
+    }
+
+  }
+

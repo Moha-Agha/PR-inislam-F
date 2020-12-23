@@ -14,6 +14,7 @@ const AddSection = () => {
 
   // section items
   const [title, setTitle] = useState();
+  const [slug, setSlug] = useState();
   const [description, setDescription] = useState();
 
   // Build article object
@@ -48,6 +49,9 @@ const AddSection = () => {
       case 'title':
         setTitle(e.target.value)
         break;
+      case 'slug':
+        setSlug(e.target.value)
+        break;
       default:
       case 'description':
         setDescription(e.target.value)
@@ -61,6 +65,7 @@ const AddSection = () => {
     if (!submitButton) return
 
     if (title) sectionFields.title = title;
+    if (slug) sectionFields.slug = slug;
     if (description) sectionFields.description = description;
 
 
@@ -93,6 +98,18 @@ const AddSection = () => {
                     value={title}
                     onChange={onChange}
                     placeholder='title*'
+                    required='required'
+                    classs=' message-item_input_1 '
+                  />
+                </div>
+                <div className="message-item">
+                  <Input
+                    id='slug'
+                    type='text'
+                    name='slug'
+                    value={slug}
+                    onChange={onChange}
+                    placeholder='slug*'
                     required='required'
                     classs=' message-item_input_1 '
                   />

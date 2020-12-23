@@ -21,6 +21,7 @@ const AddArticle = () => {
   // article items
   const [section, setSection] = useState('');
   const [title, setTitle] = useState();
+  const [slug, setSlug] = useState();
   const [subtitle, setSubtitle] = useState();
   const [articleBody, setArticleBody] = useState('');
 
@@ -58,6 +59,7 @@ const AddArticle = () => {
   useEffect(() => {
     //If all fields are filled
     if (title &&
+      slug &&
       subtitle &&
       articleBody &&
       section &&
@@ -67,7 +69,7 @@ const AddArticle = () => {
       setSubmitButton(true)
     }
     // eslint-disable-next-line
-  }, [title, subtitle, articleBody, section, image, imageAlt, imageCopyright])
+  }, [title, slug, subtitle, articleBody, section, image, imageAlt, imageCopyright])
 
   //add input values
   const onChange = e => {
@@ -86,6 +88,9 @@ const AddArticle = () => {
         break;
       case 'title':
         setTitle(e.target.value)
+        break;
+      case 'slug':
+        setSlug(e.target.value)
         break;
       default:
       case 'subtitle':
@@ -152,6 +157,7 @@ const AddArticle = () => {
       if (section !== tag) articleFields.tags[1] = tag;
       if (socialMedia) articleFields.socialMedia = socialMedia;
       if (title) articleFields.title = title;
+      if (slug) articleFields.slug = slug;
       if (subtitle) articleFields.subtitle = subtitle;
       if (articleBody) articleFields.articleBody = articleBody;
       articleFields.likes = 0;
@@ -193,6 +199,18 @@ const AddArticle = () => {
                     value={title}
                     onChange={onChange}
                     placeholder='title*'
+                    required='required'
+                    classs=' message-item_input_1 '
+                  />
+                </div>
+                <div className="message-item">
+                  <Input
+                    id='slug'
+                    type='text'
+                    name='slug'
+                    value={slug}
+                    onChange={onChange}
+                    placeholder='slug*'
                     required='required'
                     classs=' message-item_input_1 '
                   />

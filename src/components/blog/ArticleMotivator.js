@@ -1,4 +1,5 @@
 import React from "react";
+import { IMAGE_URL } from "../../utils/variables";
 
 const ArticleMotivator = ({
   slug,
@@ -14,9 +15,9 @@ const ArticleMotivator = ({
   },
   likes,
   views,
+  sections = ['nicetwice', 'logo'],
   tags = ['nicetwice', 'logo'] }) => {
 
-  const imageUrl = 'https://nicetwicede.herokuapp.com/'
   return (
     <div className="article-motivator" >
 
@@ -27,7 +28,8 @@ const ArticleMotivator = ({
         </div>
         <div className="article_footer">
           <div className="article_tags">
-            {tags.map((tag) => { return <span key={tag} className="tag">{tag}</span> })}
+            {tags.map((tag) => { return <span key={tag} className="tag">{sections.map((section) => section._id === tag && section.title)}</span> })}
+
           </div>
 
           <a href={`/article/${slug}`} rel="noopener noreferrer" className="article_title hover-1">
@@ -35,7 +37,7 @@ const ArticleMotivator = ({
           </a>
 
           <div className="article_info">
-            <a href={`/article/${slug}`} rel="noopener noreferrer" className="article_info_item">Teilen <i className="aicon-share"></i> </a>
+            <a href={`/article/${slug}`} rel="noopener noreferrer" className="article_info_item">المشاركة <i className="aicon-share"></i> </a>
             <div className="article_info_item"> {numberFormat(likes)} <i className="aicon-heart"></i></div>
             <div className="article_info_item"> {numberFormat(views)} <i className="aicon-eye"></i> </div>
           </div>
@@ -44,7 +46,7 @@ const ArticleMotivator = ({
 
       <div className="article_image">
         <div className="article_gradient-dark"></div>
-        <img src={`${imageUrl}image/${heroImage.image}`} alt="nicetwice" />
+        <img src={`${IMAGE_URL}image/${heroImage.image}`} alt="nicetwice" />
       </div>
     </div>
   );

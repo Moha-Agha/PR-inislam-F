@@ -17,7 +17,7 @@ const ArticleMore = ({ sectionSlug, articleSlug }) => {
 
   return (
     <div className="article_more">
-      <h2>Ähnliche Artikel</h2>
+      <h2>المزيد من المقالات</h2>
 
 
       <div className="article_more_blogs">

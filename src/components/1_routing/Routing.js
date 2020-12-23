@@ -6,10 +6,6 @@ import Footer from '../0_1_layout/footer/Footer';
 
 import PageNotFound from '../0_1_layout/errorPages/PageNotFound';
 
-import Portfolio from '../portfolio/Portfolio';
-import Service from '../service/Service';
-import ContactUs from '../contacts/Contacts';
-
 import Blog from '../blog/Blog';
 import Section from '../blog/section/Section';
 import Article from '../blog/article/Article';
@@ -42,21 +38,17 @@ const Routing = () => {
     <Router>
       <ScrollToTopButton />
       <div className="container">
-        {/* <Navbar /> */}
+        <Navbar />
       </div>
 
       <Alerts />
 
       <Switch>
-        <Route path='*' component={UnderConstruction} />
 
         <Route exact path='/' component={Blog} />
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/section/:name' component={Section} />
         <Route exact path='/article/:slug' component={Article} />
-        <Route exact path='/portfolio' component={Portfolio} />
-        <Route exact path='/service' component={Service} />
-        <Route exact path='/contact' component={ContactUs} />
         {/* other pages */}
         <Route exact path='/privacy' component={Privacy} />
         <Route exact path='/imprint' component={Imprint} />
@@ -75,7 +67,7 @@ const Routing = () => {
       </Switch>
 
       <div className="container">
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );
