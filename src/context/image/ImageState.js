@@ -5,9 +5,10 @@ import imageReducer from './imageReducer';
 import {
   GET_IMAGES,
   DELETE_IMAGE,
-  IMAGES_ERROR,
-  API
+  IMAGES_ERROR
 } from '../types';
+
+import { API } from '../../utils/variables';
 
 const ArticleState = props => {
   const initialState = {

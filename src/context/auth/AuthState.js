@@ -12,9 +12,10 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_ERRORS,
-  API
+  CLEAR_ERRORS
 } from '../types';
+
+import { API } from '../../utils/variables';
 
 const AuthState = props => {
   const initialState = {

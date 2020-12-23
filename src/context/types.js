@@ -64,6 +64,4 @@ export const SET_NAV_SIDEBAR_SECTION = 'SET_NAV_SIDEBAR_SECTION';
 export const SET_NAV_SIDEBAR_ITEM = 'SET_NAV_SIDEBAR_ITEM';
 export const SET_NAV_CURRENT = 'SET_NAV_CURRENT';
 
-//api add the url /api
-export const API = '';
 

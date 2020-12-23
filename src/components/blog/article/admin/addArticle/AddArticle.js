@@ -14,7 +14,7 @@ import BackTo from "../../../../0_0_uiElements/button/BackTo"
 import SectionContext from '../../../../../context/section/sectionContext';
 import ArticleContext from '../../../../../context/article/articleContext';
 
-import { API } from '../../../../../context/types';
+import { API } from '../../../../../utils/variables';
 
 const AddArticle = () => {
 

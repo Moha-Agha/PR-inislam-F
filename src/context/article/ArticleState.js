@@ -15,9 +15,10 @@ import {
   DELETE_ARTICLE,
   SET_CURRENT_ARTICLE,
   CLEAR_CURRENT_ARTICLE,
-  ARTICLE_ERROR,
-  API
+  ARTICLE_ERROR
 } from '../types';
+
+import { API } from '../../utils/variables';
 
 const ArticleState = props => {
   const initialState = {

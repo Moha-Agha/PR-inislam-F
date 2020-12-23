@@ -6,9 +6,10 @@ import {
   GET_MESSAGES,
   ADD_MESSAGE,
   DELETE_MESSAGE,
-  MESSAGE_ERROR,
-  API
+  MESSAGE_ERROR
 } from '../types';
+
+import { API } from '../../utils/variables';
 
 const MessageState = props => {
   const initialState = {

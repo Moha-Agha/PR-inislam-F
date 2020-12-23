@@ -12,9 +12,10 @@ import {
   FILTER_CONTACTS,
   CLEAR_CONTACTS,
   CLEAR_FILTER,
-  CONTACT_ERROR,
-  API
+  CONTACT_ERROR
 } from '../types';
+
+import { API } from '../../utils/variables';
 
 const ContactState = props => {
   const initialState = {

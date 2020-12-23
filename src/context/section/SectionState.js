@@ -10,9 +10,10 @@ import {
   DELETE_SECTIONS,
   SET_CURRENT_SECTION,
   CLEAR_CURRENT_SECTION,
-  SECTIONS_ERROR,
-  API
+  SECTIONS_ERROR
 } from '../types';
+
+import { API } from '../../utils/variables';
 
 const SectionState = props => {
   const initialState = {
