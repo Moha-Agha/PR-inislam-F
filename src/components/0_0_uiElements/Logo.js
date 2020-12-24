@@ -1,34 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
+const Logo = ({ logo = 'logo_nav', type = '.png', slogan, mobile }) => {
 
-
-const Logo = ({ logo = 'logo_nav', type = '.png', slogan }) => {
-
-  const [path, setPath] = useState('');
-
-  useEffect(() => {
-    resizeScreen();
-    window.addEventListener('resize', resizeScreen)
-  });
-
-  function resizeScreen() {
-    let fullPath
-
-    if (window.innerWidth <= 750) {
-      fullPath = require('../../media/image/' + logo + '_mobile' + type);
-
-    } else {
-      fullPath = require('../../media/image/' + logo + type);
-    }
-
-    setPath(fullPath)
-  }
-
+  let fullPath
+  if (mobile) fullPath = require('../../media/image/' + logo + '_mobile' + type);
+  else fullPath = require('../../media/image/' + logo + type);
 
   return (
     <a href='/' className='logo'>
-      {path ? <img src={path} alt="inislam logo" /> : <h2 className='logo-title'>inislam.net</h2>}
-      <p className='slogan'>{slogan && slogan}</p>
+      {fullPath ? <img src={fullPath} alt="inislam logo" /> : <h2 className='logo-title'>inislam.net</h2>}
+      {!mobile && <p className='slogan'>{slogan && slogan}</p>}
     </a >
   );
 };

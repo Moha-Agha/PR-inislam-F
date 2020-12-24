@@ -136,16 +136,22 @@
     
     .article_reading-duration {
      margin-top: 20px;
+     width: 46%;
     }
 
     .article_send-me-to{
-        padding: 8px 20px;
+        transform: translateY(4px);
+        padding: 10px 26px;
         margin: 0;
-     
+        width: 23%;
           span{   
             display: none ;
              } 
-         
+             i{
+                font-size: map-get($font-sizes, 'xl' );
+                margin: 0 ;
+              }
+          
     }
     
     }

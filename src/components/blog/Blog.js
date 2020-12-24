@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 
+import NavContext from '../../context/nav/navContext';
 import SectionContext from '../../context/section/sectionContext';
 import ArticleContext from '../../context/article/articleContext';
-
-import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
 
 import ArticleMotivator from "./ArticleMotivator"
 import SectionsTag from "./SectionsTag"
@@ -11,6 +10,8 @@ import Preloader from "../0_1_layout/Preloader"
 
 
 const Blog = () => {
+  const navContext = useContext(NavContext)
+  const { isMobile } = navContext;
 
   const sectionContext = useContext(SectionContext);
   const { getSections, sections, loadingSection } = sectionContext;
@@ -18,8 +19,6 @@ const Blog = () => {
   const articleContext = useContext(ArticleContext);
   const { getMostVisitedArticles, getLatestArticles, mostVisitedArticles, latestArticles, loadingArticle } = articleContext;
 
-
-  const [width, setWidth] = useState(1024)
 
   useEffect(() => {
     getSections();
@@ -29,7 +28,6 @@ const Blog = () => {
     getLatestArticles(8);
 
     window.scrollTo(0, 0);
-    setWidth(window.innerWidth);
 
     // eslint-disable-next-line
   }, [])
@@ -38,22 +36,20 @@ const Blog = () => {
     <>
       {loadingSection && loadingArticle ? <Preloader /> :
         <>
-
-
-          <div className={width > 700 ? 'container' : null}>
-
+          <div className='container'>
             <div className="blog_sections-tag">
-              <div className="blog_sections-tag-contener-RTL">
+              <div className="blog_sections-tag-contener">
 
-                {sections ? sections.slice(0, 6).map((section) => {
+                {sections && !isMobile ? sections.slice(0, 6).map((section) => {
                   return <SectionsTag key={section._id} id={section._id} title={section.title} slug={section.slug} />
-                }) : <Preloader />}
+                }) : ''}
 
-                <SectionsTag articleNumber={sections && sections.length} title={'كل الأقسام'} slug={'all-sections'} />
+                <SectionsTag articleNumber={sections && sections.length} title={!isMobile ? 'كل الأقسام' : 'عرض كل الأقسام'} slug={'all-sections'} className={isMobile && 'sections-tag_full'} />
 
               </div>
             </div>
-
+          </div>
+          <div className={!isMobile ? 'container' : ''}>
             <div className="article-motivators">
               <div className="article-motivators-contener">
                 {mostVisitedArticles !== null && mostVisitedArticles.map(({ _id, slug, heroImage, tags, title, share, likes, views, socialMedia }) => {

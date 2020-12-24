@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-const SecondaryButton = ({ title = "", className }) => {
+const SecondaryButton = ({ title = "", goTo = '/', className = "" }) => {
   return (
-    <a href="#" className={`secondary-button ${className}`}>
+    <Link to={goTo} className={`secondary-button ${className}`}>
       {title}
-    </a>
+    </Link>
   );
 };
 

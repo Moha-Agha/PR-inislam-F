@@ -1,9 +1,9 @@
 .article_body{
+    @include reset-select();
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between; 
     margin-bottom: 20px;
-    direction: $direction;
     max-width: 899px;
 
     .article_body_contener{
@@ -14,6 +14,10 @@
             font-size: map-get($font-sizes, 'm' );
         
        .article_content{
+           
+        @if $direction == rtl {
+          text-align: right;
+        }
           margin-bottom: 40px;
 
           h1{ 
@@ -52,7 +56,7 @@
 
   
     .article_body_image{
-        max-width: 560px;
+        ma-width: 560px;
         margin-bottom: 10px;
          img{
             background: $grey;

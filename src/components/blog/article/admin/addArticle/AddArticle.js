@@ -147,7 +147,7 @@ const AddArticle = () => {
 
     // upload the image and then the rest of the article opject items
     handleEditImage(childEditImage).then((fileId) => {
-      // have we the image id?
+      console.log(fileId);
 
       articleFields.tags = new Array([]);
       if (section) {

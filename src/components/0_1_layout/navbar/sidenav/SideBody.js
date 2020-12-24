@@ -39,7 +39,7 @@ function SideBody() {
             <Link to='/' className={activeLable('/')} onClick={showSidebar}>الصفحة الرئيسية</Link>
             {/* add sections */}
             {sections ? sections.map((section) => {
-                return <a href={`/section/${section.slug}`} onClick={showSidebar}>{section.title}</a>
+                return <a key={section.slug} href={`/section/${section.slug}`} onClick={showSidebar}>{section.title}</a>
             }) : <Preloader />}
         </>
     )

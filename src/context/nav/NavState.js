@@ -1,11 +1,13 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import NavContext from './navContext';
 import navReducer from './navReducer';
 import {
   SHOW_NAV_SIDEBAR,
   SET_NAV_SIDEBAR_ITEM,
   SET_NAV_SIDEBAR_SECTION,
-  SET_NAV_CURRENT
+  SET_NAV_CURRENT,
+  SET_NAV_MOBILE_SIZE,
+  SET_NAV_DESKTOP_SIZE
 } from '../types';
 
 const NavState = props => {
@@ -13,10 +15,35 @@ const NavState = props => {
     sidebar: false,
     sidebarSection: 'home',
     sidebarItem: 'menu',
+    isMobile: true,
     currentNav: ''
   };
 
   const [state, dispatch] = useReducer(navReducer, initialState);
+
+  // responsev variables
+
+  useEffect(() => {
+    handleResizeScreen();
+    window.addEventListener('resize', handleResizeScreen)
+    // eslint-disable-next-line
+  }, [state.isMobile]);
+
+  function handleResizeScreen() {
+    if (window.innerWidth <= 750) {
+      state.isMobile = true;
+      dispatch({
+        type: SET_NAV_MOBILE_SIZE,
+        payload: state.isMobile,
+      });
+    } else {
+      state.isMobile = false;
+      dispatch({
+        type: SET_NAV_DESKTOP_SIZE,
+        payload: state.isMobile,
+      });
+    }
+  }
 
   // open and close the sidenav
   const showSidebar = () => {
@@ -58,6 +85,7 @@ const NavState = props => {
         sidebarSection: state.sidebarSection,
         sidebarItem: state.sidebarItem,
         currentNav: state.currentNav,
+        isMobile: state.isMobile,
         showSidebar,
         setSidebarSection,
         setSidebarItem,

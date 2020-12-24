@@ -47,6 +47,11 @@
     
 }
 
+.sections-tag_full{
+width: 100%;
+max-width: 100%;
+}
+
 
 // Mobile
 @media all and (max-width: 700px) and (min-width: 340px) {
@@ -55,20 +60,11 @@
         margin: 0 0px  0 15px;
         padding: 8px 15px;
 
-        &:last-child{
-          position: relative;
-         &::before{
-             content: ' ';
-             position: absolute;
-             right:-25px;
-             width: 25px;
-             height: 100%;
-         }
-      }
+        .sections-tag_number{
+          padding: 0px 7px;
+             }
     }
-    .sections-tag:first-child{
-        margin: 0 0px  0 25px;
-    }
+  
   }
 
 // Tablet

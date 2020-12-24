@@ -1,7 +1,7 @@
 .logo{
     
     .logo-title{
-        color: $brand-red;
+        color: $brand-color;
     }
 
     h5{
@@ -17,3 +17,14 @@
         margin-top: -4px;
     }
         }
+
+        // Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .logo{
+        img{
+            width: 60px;
+            height: 60px;
+            transform: translateY(-5px);
+        }
+    }
+}

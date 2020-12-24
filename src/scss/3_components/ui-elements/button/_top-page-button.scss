@@ -1,0 +1,14 @@
+.top-page-button{
+  display: block;
+  width: 100%;
+  color: rgba( $brand-color, 0.40);
+  border-bottom: solid 1px rgba( $brand-color, 0.20);
+  font-size: map-get($font-sizes, 's' );
+  text-align: center;
+  padding: 9px 0px;
+  transition: all ease-in-out 0.3s;
+
+  &:hover, &:active{
+    color: $brand-color-darker;
+  }
+}

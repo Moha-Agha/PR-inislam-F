@@ -30,7 +30,6 @@ import AddArticle from '../blog/article/admin/addArticle/AddArticle';
 import EditArticle from '../blog/article/admin/editArticle/EditArticle';
 import AdminImages from '../blog/images/admin/AdminImages';
 
-import UnderConstruction from '../underConstruction/UnderConstruction'
 const Routing = () => {
 
 
@@ -63,7 +62,7 @@ const Routing = () => {
         <PrivateRoute exact path='/edit-article' component={EditArticle} />
         <PrivateRoute exact path='/images' component={AdminImages} />
 
-        {/* <Route path='*' component={PageNotFound} /> */}
+        <Route path='*' component={PageNotFound} />
       </Switch>
 
       <div className="container">
