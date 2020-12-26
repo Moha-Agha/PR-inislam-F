@@ -47,5 +47,5 @@
     "babel-eslint": "^10.1.0",
     "svg2fonts": "^0.3.0"
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "https://inislam.herokuapp.com/"
 }
