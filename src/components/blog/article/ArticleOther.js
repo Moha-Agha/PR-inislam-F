@@ -69,7 +69,7 @@ const ArticleOther = ({ likes, id, articleTitle, articleSlug }) => {
       </div>
 
       <div className="article_like">
-        <span>{hasLiked ? 'شكراً' : 'الإعجاب'}</span>
+        <span>{hasLiked ? 'شكراً' : 'إعجاب'}</span>
 
         <span onClick={() => { handleNewLike(id) }} className={hasLiked ? 'article_heart-like article_heart-liked' : 'article_heart-like'}>
           <span>{newLike}</span> <i className="aicon-heart-like"></i>

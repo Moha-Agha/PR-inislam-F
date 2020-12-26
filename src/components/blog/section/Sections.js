@@ -16,6 +16,10 @@ const Sections = () => {
   const articleContext = useContext(ArticleContext);
   const { getArticles, articles } = articleContext;
 
+  const contOfArticles = (articles, section) => {
+    let cont = articles.filter((article) => section === article.section)
+    return cont.length;
+  }
 
   useEffect(() => {
     if (sections !== null) getSections()
@@ -31,7 +35,7 @@ const Sections = () => {
 
         <div className='sections-items'>
           {sections.map((section) => {
-            return <SectionsItem key={section._id} sectionTitle={section.title} articleCount={0} sectionSlug={section.slug} />
+            return <SectionsItem key={section._id} sectionTitle={section.title} articleCount={contOfArticles(articles, section._id)} sectionSlug={section.slug} />
           })}
         </div>
       </div>
