@@ -1,5 +1,5 @@
 
-const production = true;
+const production = false;
 
 export let IMAGE_URL;
 //api add the url /api

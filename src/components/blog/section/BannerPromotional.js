@@ -1,5 +1,4 @@
 import React from "react";
-import SecondaryButton from "../../0_0_uiElements/button/SecondaryButton"
 
 const BannerPromotional = ({ TextTitle = '', TextBody }) => {
   return (
@@ -10,7 +9,7 @@ const BannerPromotional = ({ TextTitle = '', TextBody }) => {
       <p>
         {TextBody}
       </p>
-      <SecondaryButton title='أدعم الموقع الأن' goTo='/contact' />
+      <a className='secondary-button' href='https://paypal.me/pools/c/8vvoIYGbxt' rel="noopener noreferrer" target='_blank' >أدعم الموقع الأن</a>
       <span className="sub-link">
         بالضعط على الزر ستنتقل إلى موقع البي بال
       </span>

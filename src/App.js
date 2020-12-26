@@ -5,11 +5,11 @@ import "./scss/App.scss";
 import Routing from './components/1_routing/Routing';
 import Preloader from './components/0_1_layout/Preloader';
 
-import ContactState from './context/contact/ContactState';
 import MessagetState from './context/message/MessagetState';
 import SectionState from './context/section/SectionState';
 import ArticleState from './context/article/ArticleState';
 import AuthState from './context/auth/AuthState';
+import NewMuslimState from './context/newMuslim/NewMuslimState';
 import AlertState from './context/alert/AlertState';
 import ImageState from './context/image/ImageState';
 import NavState from './context/nav/NavState';
@@ -32,7 +32,7 @@ const App = () => {
     <> { loading ?
       (<>
         <AuthState>
-          <ContactState>
+          <NewMuslimState>
             <SectionState>
               <ArticleState>
                 <AlertState>
@@ -48,7 +48,7 @@ const App = () => {
                 </AlertState>
               </ArticleState>
             </SectionState>
-          </ContactState>
+          </NewMuslimState>
         </AuthState>
       </>)
       : <Preloader />}

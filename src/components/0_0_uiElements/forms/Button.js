@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ value, type, placeholder, className, useFunction }) => {
+const Button = ({ value, type, className, useFunction, onSubmit }) => {
   let classesName = 'button ' + className;
 
   return (

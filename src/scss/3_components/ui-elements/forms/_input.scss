@@ -7,9 +7,9 @@
         height: 40px;
          width: 100%;
         border: 0;
-        border-bottom: 1px solid  $brand-grey;
+        border-bottom: 1px solid  $brand-color-dark;
         outline: 0;
-        color: $brand-grey;
+        color: $brand-color-dark;
         font-size:  map-get($font-sizes, 'm');
         background: transparent;
         padding: 0 10px;
@@ -21,12 +21,12 @@
         height: 40px;
         width: 100%;
        border: 0;
-       border-bottom: 1px solid  $brand-grey;
+       border-bottom: 1px solid  $brand-color-dark;
        outline: 0;
        background: transparent;
        padding: 0 10px;
-        -webkit-text-fill-color: $white;
-        -webkit-box-shadow: 0 0 0px 1000px $brand-black inset;
+        -webkit-text-fill-color: $brand-color;
+        -webkit-box-shadow: 0 0 0px 1000px $brand-white inset;
         transition: background-color 5000s ease-in-out 0s;
                                      }
 

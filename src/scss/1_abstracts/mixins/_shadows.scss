@@ -3,28 +3,32 @@
 }
 
 @mixin add-shadow-blue() {
-  box-shadow: 0 0.5rem 1.5rem 0 rgba(20, 139, 246, 0.18);
+  box-shadow: 0 0.5rem 1.5rem 0 rgba($brand-color, 0.18);
 }
 
 @mixin add-shadow-xs() {
-  box-shadow: 0 3px 10px 0 rgba(240, 98, 40, 0.07);
+  box-shadow: 0 3px 10px 0 rgba($brand-color, 0.07);
 }
 @mixin add-shadow-s() {
-  box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 14px 0 rgba($brand-color, 0.09);
+}
+
+@mixin add-shadow-m() {
+  box-shadow: 0px 0.6rem 0.9rem 0px rgba($brand-color, 0.12);
 }
 
 @mixin add-shadow-l() {
-  box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 2rem 0 rgba($brand-color, 0.15);
 }
 
 @mixin add-shadow-xl() {
-  box-shadow: 0 0.5rem 3rem 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 3rem 0 rgba($brand-color, 0.15);
 }
 
 @mixin add-shadow-seidnav() {
-  box-shadow: -10px 3px 26px 0 rgba(0, 0, 0, 0.56);
+  box-shadow: -10px 3px 26px 0 rgba($brand-color, 0.56);
 }
 
 @mixin add-shadow-service() {
-  box-shadow: 0 4px 33px 0 #00000082;
+  box-shadow: 0 4px 33px 0 rgba($brand-color-darker, 1.0);
 }

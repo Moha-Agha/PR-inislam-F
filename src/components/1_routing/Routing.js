@@ -7,8 +7,11 @@ import Footer from '../0_1_layout/footer/Footer';
 import PageNotFound from '../0_1_layout/errorPages/PageNotFound';
 
 import Blog from '../blog/Blog';
+import Sections from '../blog/section/Sections';
 import Section from '../blog/section/Section';
 import Article from '../blog/article/Article';
+
+import NewMuslim from '../blog/newMuslim/NewMuslim';
 
 import Alerts from '../0_1_layout/Alerts';
 import ScrollToTopButton from '../0_0_uiElements/button/ScrollToTopButton';
@@ -45,8 +48,10 @@ const Routing = () => {
       <Switch>
 
         <Route exact path='/' component={Blog} />
+        <Route exact path='/new-muslim' component={NewMuslim} />
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/section/:name' component={Section} />
+        <Route exact path='/sections' component={Sections} />
         <Route exact path='/article/:slug' component={Article} />
         {/* other pages */}
         <Route exact path='/privacy' component={Privacy} />

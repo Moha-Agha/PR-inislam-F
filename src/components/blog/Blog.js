@@ -44,7 +44,7 @@ const Blog = () => {
                   return <SectionsTag key={section._id} id={section._id} title={section.title} slug={section.slug} />
                 }) : ''}
 
-                <SectionsTag articleNumber={sections && sections.length} title={!isMobile ? 'كل الأقسام' : 'عرض كل الأقسام'} slug={'all-sections'} className={isMobile && 'sections-tag_full'} />
+                <SectionsTag articleNumber={sections && sections.length} goTo={'/sections'} title={!isMobile ? 'كل الأقسام' : 'عرض كل الأقسام'} slug={'all-sections'} className={isMobile && 'sections-tag_full'} />
 
               </div>
             </div>

@@ -58,6 +58,10 @@ export const AUTH_ERROR = 'AUTH_ERROR';
 
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
+//new email
+export const REGISTER_NEW_EMAIL = 'REGISTER_NEW_EMAIL';
+export const REGISTER_FAIL_NEW_EMAIL = 'REGISTER_FAIL_NEW_EMAIL';
+
 //nav
 export const SHOW_NAV_SIDEBAR = 'SHOW_NAV_SIDEBAR';
 export const SET_NAV_SIDEBAR_SECTION = 'SET_NAV_SIDEBAR_SECTION';

@@ -13,10 +13,10 @@ const Navbar = () => {
 
   return (
     <>
-      {isMobile && <TopPageButton title={'هل أنت مسلم جديد؟'} />}
+      {isMobile && <TopPageButton goTo={'/new-muslim'} title={'هل أنت مسلم جديد؟'} />}
       < div id='nav' className="navbar" >
         <Sidenav />
-        {!isMobile && <PremiumOutlineButton title={'هل أنت مسلم جديد؟'} />}
+        {!isMobile && <PremiumOutlineButton goTo={'/new-muslim'} title={'هل أنت مسلم جديد؟'} />}
         <Logo logo='inislam_logo' type='.png' slogan='منصة معرفية متخصصة في البحوث الإسلامية' mobile={isMobile} />
         <div className="navbar_items">
           <div className="icon-circle" onClick={() => { setSidebarSection('search'); showSidebar() }}><i className="aicon-search"></i></div>

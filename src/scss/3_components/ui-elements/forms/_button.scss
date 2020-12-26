@@ -1,12 +1,12 @@
 .button{
-    padding: 10px;
-    margin: 30px 0 10px 0;
+  display: inline-block;
+    padding: 10px 20px 15px 20px;
+    margin: auto auto 10px auto;
     text-align: center;
-    // width: 100%;
     text-transform: capitalize;
     font-size: map-get($font-sizes, 'm');
     border-radius: $border-radius-lg;
-    background: $brand-red;
+    background: $brand-color-dark;
             }
   input {
       background: none;
