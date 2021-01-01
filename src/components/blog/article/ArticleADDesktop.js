@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
 const ArticleADDesktop = () => {
   const adTitel = 'هل تجد محتوى هذا الموقع مفيد لك؟'
@@ -18,7 +17,7 @@ const ArticleADDesktop = () => {
           <p className='my_ad-info'>{adInfo}</p>
           <p className='my_ad-interesting-point'>{adInterestingPoint}</p>
 
-          <Link to='/contact' className='my_ad-action'>{adAction}</Link>
+          <a href='https://paypal.me/pools/c/8vvoIYGbxt' className='my_ad-action'>{adAction}</a>
         </div>
       </div>
     </>

@@ -24,6 +24,14 @@
      background: $blue;
      margin: 20px 0 0 0;
     }
+
+ .button-disabled{
+     opacity: 0.6;
+     cursor: not-allowed;
+     input{
+      cursor: not-allowed; 
+     }
+    }
     
 
   

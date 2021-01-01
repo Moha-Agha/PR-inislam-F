@@ -32,6 +32,7 @@ import AdminArticle from '../blog/article/admin/AdminArticle';
 import AddArticle from '../blog/article/admin/addArticle/AddArticle';
 import EditArticle from '../blog/article/admin/editArticle/EditArticle';
 import AdminImages from '../blog/images/admin/AdminImages';
+import AdminNewMuslim from '../blog/newMuslim/admin/AdminNewMuslim';
 
 const Routing = () => {
 
@@ -66,6 +67,7 @@ const Routing = () => {
         <PrivateRoute exact path='/new-article' component={AddArticle} />
         <PrivateRoute exact path='/edit-article' component={EditArticle} />
         <PrivateRoute exact path='/images' component={AdminImages} />
+        <PrivateRoute exact path='/new-muslims' component={AdminNewMuslim} />
 
         <Route path='*' component={PageNotFound} />
       </Switch>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AlertContext from '../../../context/alert/alertContext';
 import NewMuslimContext from '../../../context/newMuslim/newMuslimContext';
 
@@ -11,7 +11,10 @@ const NewMuslim = () => {
   let content
   const [step, setStep] = useState(1);
 
-  const [addemail, setAddEmail] = useState('');
+  const [addemail, setAddEmail] = useState({
+    website: 'inislam.net',
+    email: ''
+  });
   const [formTitle, setFormTitle] = useState('دورة متكاملة');
   const [formsubtitle, setFormsubtitle] = useState('نعمل على إتمام دورة تعليمية سهلة ومختصرة تجيب على معظم أسئلة المسلم الجديد, أشترك بالقائمة ليصلك إشعار');
   const [spenden, setSpenden] = useState('');
@@ -20,33 +23,36 @@ const NewMuslim = () => {
   const { setAlert } = alertContext;
 
   const newMuslimContext = useContext(NewMuslimContext)
-  const { registerNewEmail, email, emailError } = newMuslimContext;
+  const { registerNewEmail, email, emailError, emailLoading } = newMuslimContext;
 
-  const onChange = e => setAddEmail(e.target.value);
+  const onChange = e => {
+    setAddEmail({ ...addemail, [e.target.name]: e.target.value })
+    setStep(1)
+  }
 
   const onSubmit = e => {
     e.preventDefault();
+    setStep(2)
+    registerNewEmail(addemail)
+  }
 
-    if (addemail === '') {
-      setAlert('الرجاء إضافة حقل الإيميل', 'error');
-    } else {
-      registerNewEmail(addemail)
+  useEffect(() => {
+    if (emailLoading === false) {
 
       if (email) {
         setFormTitle('تم الإرسال');
         setFormsubtitle('شكراً على ثقتك بنا, سوف نبذل جهدنا لتحصل على المحتوى بأقرب وقت ممكن. ')
         setSpenden('تسعدنا مساهمتك لدعم المشروع بالتبرع من خلال رابط موقع البي بال .لأنتقال الى موقع البي بال انقر هنا رجاءً')
-        setStep(2);
+        setStep(3);
       }
-
-      if (email === null || emailError) setAlert('حدث خطاء اثناء المعالجة, الرجاء المحاولة لاحقاً', 'error')
+      if (email === null && emailError !== null) setAlert('حدث خطاء اثناء المعالجة او ان عنوان الإيميل مستخدم بالفعل, الرجاء المحاولة لاحقاً', 'error')
 
     }
-  }
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [emailLoading, email, emailError])
 
   switch (step) {
-    case 2:
+    case 3:
       content = <>
         <h1>{formTitle}</h1>
         <p>{formsubtitle}</p>
@@ -58,8 +64,8 @@ const NewMuslim = () => {
       content = <form onSubmit={onSubmit}>
         <h1>{formTitle}</h1>
         <p>{formsubtitle}</p>
-        <Input type={'email'} name={'email'} value={addemail} onChange={onChange} placeholder={'الرجاء إدخال عنوان البريد الإلكتروني هنا'} required={true} />
-        <Button type={'submit'} value={'إشترك الأن'} />
+        <Input type={'email'} name={'email'} value={addemail.email} onChange={onChange} placeholder={'الرجاء إدخال عنوان البريد الإلكتروني هنا'} required={true} />
+        <Button type={'submit'} Loading={step === 2 && true} value={'إشترك الأن'} />
       </form>
       break;
   }

@@ -52,6 +52,7 @@ function SideBody() {
                 <Link to='/section' className={activeLable('/section')} onClick={showSidebar}>Section</Link>
                 <Link to='/article' className={activeLable('/article')} onClick={showSidebar}>Article</Link>
                 <Link to='/images' className={activeLable('/images')} onClick={showSidebar}>Images</Link>
+                <Link to='/new-muslims' className={activeLable('/new-muslims')} onClick={showSidebar}>New Muslims</Link>
             </>
             : null
     )
