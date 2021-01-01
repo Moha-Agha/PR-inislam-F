@@ -37,6 +37,9 @@ const Blog = () => {
       {loadingSection && loadingArticle ? <Preloader /> :
         <>
           <div className='container'>
+            <h2 className='header-title-mobile'>
+              منصة معرفية متخصصة في البحوث الإسلامية
+            </h2>
             <div className="blog_sections-tag">
               <div className="blog_sections-tag-contener">
 
