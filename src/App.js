@@ -18,13 +18,13 @@ import NavState from './context/nav/NavState';
 
 const App = () => {
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
 
   useEffect(() => {
-    window.addEventListener('load', () => {
-      setLoading(true);
-    });
+    // window.addEventListener('load', () => {
+    //   setLoading(true);
+    // });
   })
 
   return (
